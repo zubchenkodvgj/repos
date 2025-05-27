@@ -1,0 +1,11 @@
+pyinstaller ^
+  --noconfirm ^
+  --onefile ^
+  --windowed ^
+  --hidden-import "xgboost" ^
+  --hidden-import "xgboost.sklearn" ^
+  --hidden-import "xgboost.callback" ^
+  --hidden-import "sklearn" ^
+  --add-binary "C:\model_scaler\venv\Lib\site-packages\xgboost\lib\xgboost.dll:xgboost/lib" ^
+  --add-binary "C:\model_scaler\venv\Lib\site-packages\xgboost\VERSION:xgboost" ^
+  C:\model_scaler\xgb_predictor_gui.py
